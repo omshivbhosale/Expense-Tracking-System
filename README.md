@@ -117,7 +117,3 @@ pytest
 - Writing **SQL queries** for inserts, deletes, and aggregations (category summaries)
 - Adding **logging** and **unit tests** to a Python project
 - Building an interactive data app with **Streamlit**
-
-## Acknowledgements
-
-Built by following the **codebasics** Python course (codebasics.io). The project concept is from the course; this repository is my own implementation.
