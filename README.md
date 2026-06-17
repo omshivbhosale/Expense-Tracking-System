@@ -6,19 +6,6 @@ A full-stack expense management application with a **FastAPI** backend, a **Stre
 
 ---
 
-## Demo
-
-<!-- TODO: Run the app, take screenshots, and add them here. You already have
-some screenshots (analytics and add/update views) — drag them into the GitHub
-editor to upload, then reference them like this:
-![Add/Update view](app_frontend_ui.png)
-![Analytics view](analytics_ui_demo1.png)
--->
-
-*Screenshots coming soon.*
-
----
-
 ## Features
 
 - **Add / update expenses** for any date (amount, category, notes)
