@@ -1,6 +1,13 @@
+import os
 import mysql.connector
 from contextlib import contextmanager
 from logging_setup import setup_logger
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:  # python-dotenv is optional; plain environment variables also work
+    pass
 
 
 # logger = setup_logger('db_helper')
@@ -9,10 +16,10 @@ from logging_setup import setup_logger
 @contextmanager
 def get_db_cursor(commit=False):
     connection = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="root",
-        database="expense_manager"
+        host=os.environ.get("DB_HOST", "localhost"),
+        user=os.environ["DB_USER"],
+        password=os.environ["DB_PASSWORD"],
+        database=os.environ.get("DB_NAME", "expense_manager"),
     )
 
     cursor = connection.cursor(dictionary=True)
