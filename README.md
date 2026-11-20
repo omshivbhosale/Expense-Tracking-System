@@ -91,7 +91,11 @@ pip install -r requirements.txt
 ### 5. Set up the database
 Run the SQL script in `database/expense_db_creation.sql` against your MySQL server to create the database and `expenses` table.
 
-> **Note:** Database credentials are set in `backend/db_helper.py`. Update the `host`, `user`, `password`, and `database` values there to match your MySQL setup.
+Copy `.env.example` to `.env` and fill in your MySQL login (`DB_USER` and `DB_PASSWORD` are required; `DB_HOST` and `DB_NAME` default to `localhost` and `expense_manager`). The `.env` file is git-ignored; never commit it.
+
+```bash
+cp .env.example .env
+```
 
 ### 6. Run the backend (from the project root)
 ```bash
